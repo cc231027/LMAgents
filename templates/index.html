@@ -5,14 +5,45 @@
     <title>Agent Chat</title>
     <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #96878768;
+        }
         .message {
             margin-bottom: 10px;
+            padding: 5px;
+            border: 1px solid #7e5cb8;
+            border-radius: 5px;
+        }
+        h1 {
+            text-align: center;
+            color: #7e5cb8;
         }
         #chat {
             max-height: 400px;
             overflow-y: auto;
-            border: 1px solid #ccc;
+            border: 3px solid #b6e313;
             padding: 10px;
+            background-color: antiquewhite;
+            border-radius: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #7e5cb8;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+        #topic_input {
+            padding: 10px;
+            width: calc(100% - 22px); /* Adjust width considering padding and border */
+            margin-bottom: 10px;
+            border: 2px solid #7e5cb8;
+            border-radius: 10px;
         }
     </style>
 </head>
