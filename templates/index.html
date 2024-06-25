@@ -40,10 +40,14 @@
         }
         #topic_input {
             padding: 10px;
-            width: calc(100% - 22px); /* Adjust width considering padding and border */
+            width: calc(100% - 22px);
             margin-bottom: 10px;
             border: 2px solid #7e5cb8;
             border-radius: 10px;
+        }
+        .agent-name {
+            font-weight: bold;
+            color: #7e5cb8;
         }
     </style>
 </head>
@@ -57,10 +61,10 @@
         var socket = io.connect('http://127.0.0.1:5000');
         var currentMessageContainer = null;
         var currentRole = null;
-
+    
         socket.on('new_message', function(msg) {
             var chat = document.getElementById('chat');
-
+    
             // Check if the role has changed or if there is no current message container
             if (currentRole !== msg.role || !currentMessageContainer) {
                 // Create a new message container for each new message
@@ -69,12 +73,23 @@
                 chat.appendChild(currentMessageContainer);
                 currentRole = msg.role;
             }
-
-            // Update the current message container with the new content
-            currentMessageContainer.textContent = `${msg.role}: ${msg.content}`;
+    
+            
+            var nameSpan = document.createElement('span');
+            nameSpan.className = `agent-name ${msg.role}`;
+            nameSpan.textContent = `${msg.role}: `;
+    
+            // Create a text node for the message content to prevent HTML injection
+            var messageContent = document.createTextNode(msg.content);
+    
+            // Clear the current message container, then append the new elements
+            currentMessageContainer.innerHTML = '';
+            currentMessageContainer.appendChild(nameSpan);
+            currentMessageContainer.appendChild(messageContent);
+    
             chat.scrollTop = chat.scrollHeight;  // Scroll to the bottom
         });
-
+    
         function startConversation() {
             var input = document.getElementById('topic_input');
             var topic = input.value;

@@ -5,7 +5,7 @@
         "api_key": "lm-studio",
         "model": "lmstudio-ai/gemma-2b-it-GGUF/gemma-2b-it-q4_k_m.gguf",
         "temperature": 0.7,
-        "starting_prompt": "You are the president of Russia, invited to participate in internet discussions. You will provide short, at max tweet-sized political answers in the interest of your country."
+        "starting_prompt": "You are the president of Russia, invited to participate in internet discussions. You will provide short, at max tweet-sized political answers in the interest of your country. Be selfish."
     },
     {
         "name": "Elon Musk",
@@ -29,7 +29,7 @@
         "api_key": "lm-studio",
         "model": "lmstudio-ai/gemma-2b-it-GGUF/gemma-2b-it-q4_k_m.gguf",
         "temperature": 0.7,
-        "starting_prompt": "You are the president of Brazil, the Amazon general, invited to participate in internet discussions. You will only answer using hashtags in the interest of your people and saving the Amazon rain forest."
+        "starting_prompt": "You are the president of Brazil, the Amazon general, invited to participate in internet discussions. You will only answer using short tweet-sized responses and hashtags in the interest of your people and saving the Amazon rain forest."
     },
     {
         "name": "Nnamdi Kanu",
@@ -45,6 +45,6 @@
         "api_key": "lm-studio",
         "model": "lmstudio-ai/gemma-2b-it-GGUF/gemma-2b-it-q4_k_m.gguf",
         "temperature": 0.7,
-        "starting_prompt": "You are a military man. You will only answer using short (tweet-sized) military quotes related to every raised topic."
+        "starting_prompt": "You are a soldier and politician. You will only answer using short (tweet-sized) counter opinion on every raised topic. Be toxic in your responses."
     }
 ]
