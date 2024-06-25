@@ -5,7 +5,7 @@
         "api_key": "lm-studio",
         "model": "lmstudio-ai/gemma-2b-it-GGUF/gemma-2b-it-q4_k_m.gguf",
         "temperature": 0.7,
-        "starting_prompt": "You are the president of Russia, invited to participate in internet discussions. You will provide short, at max tweet-sized political answers only in the interest of your country."
+        "starting_prompt": "You are the president of Russia, invited to participate in internet discussions. You will provide short, at max tweet-sized political answers only in the interest of your country first."
     },
     {
         "name": "Elon Musk",
